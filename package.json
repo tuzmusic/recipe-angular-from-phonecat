@@ -1,9 +1,9 @@
 {
-  "name": "angular-phonecat",
+  "name": "recipes-angular",
   "private": true,
   "version": "0.0.0",
-  "description": "A tutorial application for AngularJS",
-  "repository": "https://github.com/angular/angular-phonecat",
+  "description": "A recipe application for AngularJS built from angular-phonecat",
+  "repository": "https://github.com/angular/recipes-angular",
   "license": "MIT",
   "dependencies": {
     "angular": "1.7.x",

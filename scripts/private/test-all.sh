@@ -1,43 +1,47 @@
 #!/bin/bash
 
-set -ex
-
-cleanUp () {
-  kill $WEBSERVER_PID
-  git checkout -f $BRANCH
-}
-
-trap cleanUp EXIT
-
 ROOT_DIR=`dirname $0`/../..
-
 cd $ROOT_DIR
-BRANCH=$(git rev-parse --abbrev-ref HEAD)
-COMMIT=$(git rev-parse HEAD)
 
-# Ensure that all the dependencies are there
-npm install
+SNAP_DIR=recipes-angular-snapshots
+SANDBOX_DIR=$SNAP_DIR/sandbox
 
-# Ensure that the chromeDriver is installed
-node_modules/.bin/webdriver-manager update --gecko false --standalone false
 
-# Start up the web server
-node_modules/.bin/http-server ./app -a localhost -p 8000 -c-1 --silent &
-WEBSERVER_PID=$!
+rm -rf $SNAP_DIR
+mkdir $SNAP_DIR
 
-# Run the unit and e2e tests
-# (Steps 0 and 1 do not have tests)
-for i in $(seq 2 14)
+for i in {0..12}
 do
-  if [[ $TRAVIS ]] && [[ "$TRAVIS_REPO_SLUG" == "angular/angular-phonecat" ]] && [[ "$TRAVIS_PULL_REQUEST" == "false" ]]; then
-    # On non-PR builds on CI, use the `step-*` tags.
+    mkdir $SNAP_DIR/step-$i
     git checkout -f step-$i
-  else
-    # Locally and on PR builds on CI, use the last commits.
-    # (Assumes that the last commits are the `step-*` commits.)
-    git checkout -f $COMMIT~$((14 - $i))
-  fi
-
-  node_modules/.bin/karma start karma.conf.js --single-run --browsers ChromeHeadless,FirefoxHeadless
-  node_modules/.bin/protractor e2e-tests/protractor.conf.js --directConnect --capabilities.chromeOptions.args headless
+    
+    if [[ $i = 0 ]]; then
+        cp -r app config scripts test $SNAP_DIR/step-0/
+        mkdir $SNAP_DIR/step-0/logs
+        rm -r $SNAP_DIR/step-0/scripts/private
+        rm $SNAP_DIR/step-0/scripts/update-repo.sh
+    else
+        cp -r app $SNAP_DIR/step-$i/
+        mkdir $SNAP_DIR/step-$i/test/
+        cp -r test/unit test/e2e $SNAP_DIR/step-$i/test
+        rm -r $SNAP_DIR/step-$i/app/img
+        rm -r $SNAP_DIR/step-$i/app/lib
+        rm -rf $SNAP_DIR/step-$i/app/phones
+    fi
+    
+    if [[ $i = 5 ]]; then
+        cp -r app/img $SNAP_DIR/step-0/app/
+        cp -r app/phones $SNAP_DIR/step-0/app/
+    fi
 done
+
+mkdir $SANDBOX_DIR
+cp scripts/private/goto_step.sh $SANDBOX_DIR
+cp scripts/private/goto_step.bat $SANDBOX_DIR
+
+# Install karma modules
+cp -r node_modules/ $SANDBOX_DIR/
+
+zip -r recipes-angular-`date +"%y%m%d_%H%M"` $SNAP_DIR
+
+git checkout master

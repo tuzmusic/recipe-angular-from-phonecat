@@ -1,6 +1,5 @@
 # AngularJS Phone Catalog Tutorial Application
 
-
 ## Overview
 
 This application takes the developer through the process of building a web-application using
@@ -10,7 +9,6 @@ Here is a historical reference: [Google Phone Gallery on WayBack][google-phone-g
 Each tagged commit is a separate lesson teaching a single aspect of the framework.
 
 The full tutorial can be found at https://docs.angularjs.org/tutorial.
-
 
 ## Prerequisites
 
@@ -24,7 +22,6 @@ The full tutorial can be found at https://docs.angularjs.org/tutorial.
 - Get [Node.js][node].
 - Install the tool dependencies: `npm install`
 
-
 ## Workings of the Application
 
 - The application filesystem layout structure is based on the [angular-seed][angular-seed] project.
@@ -32,7 +29,6 @@ The full tutorial can be found at https://docs.angularjs.org/tutorial.
   application server by fetching static JSON files.
 - Read the _Development_ section at the end to familiarize yourself with running and developing
   an AngularJS application.
-
 
 ## Commits / Tutorial Outline
 
@@ -166,8 +162,7 @@ git diff step-?..step-?
   - CSS keyframe animations.
   - JavaScript-based animations.
 
-
-## Development with `angular-phonecat`
+## Development with `recipes-angular`
 
 The following docs describe how you can test and develop this application further.
 
@@ -186,8 +181,8 @@ them to `app/lib`.
 Most of the scripts described below will run this automatically but it doesn't do any harm to run
 it whenever you like.
 
-*Note copying the AngularJS files from `node_modules` to `app/lib` makes it easier to serve the
-files by a web server.*
+_Note copying the AngularJS files from `node_modules` to `app/lib` makes it easier to serve the
+files by a web server._
 
 ### Running the Application during Development
 
@@ -225,7 +220,6 @@ the [Java Development Kit (JDK)][jdk] to be installed on your local machine. Che
 `java -version` from the command line.
 
 If JDK is not already installed, you can download it [here][jdk-download].
-
 
 ## Application Directory Layout
 
@@ -265,7 +259,6 @@ package-lock.json        --> Npm specific metadata, including versions of instal
 ## Contact
 
 For more information on AngularJS, please check out https://angularjs.org/.
-
 
 [angular-seed]: https://github.com/angular/angular-seed
 [git-home]: https://git-scm.com/
