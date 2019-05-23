@@ -6,12 +6,12 @@ describe("stepSlide", function() {
 
   // Test the controller
   describe("StepSlideController", function() {
-    it("should create a `phones` model with 3 phones", inject(function(
+    it("should create a `stepSlide` model with a step", inject(function(
       $componentController
     ) {
       var ctrl = $componentController("stepSlide");
 
-      expect(ctrl.phones.length).toBe(3);
+      expect(ctrl.step.text).toEqual("Add 1 tbsp of sugar");
     }));
   });
 });
