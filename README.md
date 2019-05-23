@@ -238,7 +238,7 @@ app/                     --> all the source code of the app (along with unit tes
     core.module.js       --> the core module
   img/...                --> image files
   phone-detail/...       --> files for the `phoneDetail` module, including JS source code, HTML templates, specs
-  phone-list/...         --> files for the `phoneList` module, including JS source code, HTML templates, specs
+  step-slide/...         --> files for the `phoneList` module, including JS source code, HTML templates, specs
   phones/...             --> static JSON files with phone data (used to fake a backend API)
   app.animations.css     --> hooks for running CSS animations with `ngAnimate`
   app.animations.js      --> hooks for running JS animations with `ngAnimate`
