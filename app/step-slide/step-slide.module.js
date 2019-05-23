@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
-// Define the `phoneList` module
-angular.module('phoneList', []);
+// Define the `stepSlide` module
+angular.module("stepSlide", []);

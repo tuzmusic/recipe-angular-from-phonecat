@@ -2,6 +2,6 @@
 
 // Define the `recipeApp` module
 angular.module("recipeApp", [
-  // ...which depends on the `phoneList` module
-  "phoneList"
+  // ...which depends on the `stepSlide` module
+  "stepSlide"
 ]);

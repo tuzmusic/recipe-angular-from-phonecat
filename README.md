@@ -58,17 +58,17 @@ git diff step-?..step-?
 ### step-2 _AngularJS Templates_
 
 - Convert the static phone list to dynamic by:
-  - Creating a `PhoneListController` controller.
+  - Creating a `StepSlideController` controller.
   - Extracting the data from HTML into the controller as an in-memory dataset.
   - Converting the static document into a template with the use of the `ngRepeat` directive.
-- Add a simple unit test for the `PhoneListController` controller to show how to write tests and
+- Add a simple unit test for the `StepSlideController` controller to show how to write tests and
   run them using Karma.
 
 ### step-3 _Components_
 
 - Introduce components.
-- Combine the controller and the template into a reusable, isolated `phoneList` component.
-- Refactor the application and tests to use the `phoneList` component.
+- Combine the controller and the template into a reusable, isolated `stepSlide` component.
+- Refactor the application and tests to use the `stepSlide` component.
 
 ### step-4 _Directory and File Organization_
 
@@ -118,7 +118,7 @@ git diff step-?..step-?
   - Configure routes for the application.
   - Use the `ngView` directive in 'index.html'.
 - Create a phone list route (`/phones`):
-  - Map `/phones` to the existing `phoneList` component.
+  - Map `/phones` to the existing `stepSlide` component.
 - Create a phone detail route (`/phones/:phoneId`):
   - Map `/phones/:phoneId` to a new `phoneDetail` component.
   - Create a dummy `phoneDetail` component, which displays the selected phone ID.
@@ -232,7 +232,7 @@ app/                     --> all the source code of the app (along with unit tes
     core.module.js       --> the core module
   img/...                --> image files
   phone-detail/...       --> files for the `phoneDetail` module, including JS source code, HTML templates, specs
-  step-slide/...         --> files for the `phoneList` module, including JS source code, HTML templates, specs
+  step-slide/...         --> files for the `stepSlide` module, including JS source code, HTML templates, specs
   phones/...             --> static JSON files with phone data (used to fake a backend API)
   app.animations.css     --> hooks for running CSS animations with `ngAnimate`
   app.animations.js      --> hooks for running JS animations with `ngAnimate`

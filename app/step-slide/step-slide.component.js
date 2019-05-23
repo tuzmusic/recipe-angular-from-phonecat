@@ -1,22 +1,22 @@
-'use strict';
+"use strict";
 
-// Register `phoneList` component, along with its associated controller and template
-angular.
-  module('phoneList').
-  component('phoneList', {
-    templateUrl: 'step-slide/step-slide.template.html',
-    controller: function PhoneListController() {
-      this.phones = [
-        {
-          name: 'Nexus S',
-          snippet: 'Fast just got faster with Nexus S.'
-        }, {
-          name: 'Motorola XOOM™ with Wi-Fi',
-          snippet: 'The Next, Next Generation tablet.'
-        }, {
-          name: 'MOTOROLA XOOM™',
-          snippet: 'The Next, Next Generation tablet.'
-        }
-      ];
-    }
-  });
+// Register `stepSlide` component, along with its associated controller and template
+angular.module("stepSlide").component("stepSlide", {
+  templateUrl: "step-slide/step-slide.template.html",
+  controller: function StepSlideController() {
+    this.phones = [
+      {
+        name: "Nexus S",
+        snippet: "Fast just got faster with Nexus S."
+      },
+      {
+        name: "Motorola XOOM™ with Wi-Fi",
+        snippet: "The Next, Next Generation tablet."
+      },
+      {
+        name: "MOTOROLA XOOM™",
+        snippet: "The Next, Next Generation tablet."
+      }
+    ];
+  }
+});
