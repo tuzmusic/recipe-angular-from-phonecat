@@ -1,12 +1,7 @@
 function RecipeListController($http) {
-  let self = this;
   $http.get("recipes.json").then(res => {
-    console.log(res.data);
-
-    self.recipes = res.data;
+    this.recipes = res.data;
   });
-
-  // this.recipes = recipes;
 }
 
 angular.module("recipeList").component("recipeList", {
