@@ -1,7 +1,7 @@
 // AngularJS E2E Testing Guide:
 // https://docs.angularjs.org/guide/e2e-testing
 
-describe("Home page", function() {
+describe("Recipe index page", function() {
   let recipeList;
 
   beforeEach(function() {
@@ -23,6 +23,18 @@ describe("Home page", function() {
     expect(links.count()).toBe(2);
     expect(links.first().getAttribute("href")).toContain(
       "chocolate-chip-cookies"
+    );
+  });
+});
+
+fdescribe("Recipe show page", () => {
+  beforeEach(() => {
+    browser.get("index.html#!/recipes/chocolate-chip-cookies");
+  });
+
+  it("should display the recipe", () => {
+    expect(
+      element(by.css("#recipe-title").getText()).toBe("chocolate-chip-cookies")
     );
   });
 });
