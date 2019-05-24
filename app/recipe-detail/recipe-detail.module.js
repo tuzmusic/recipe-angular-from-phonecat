@@ -1,1 +1,1 @@
-angular.module("recipe-detail", []);
+angular.module("recipeDetail", []);

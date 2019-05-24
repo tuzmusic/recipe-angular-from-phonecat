@@ -3,7 +3,7 @@ function RecipeController() {
   this.recipe = recipe;
 }
 
-angular.module("recipe-detail").component("recipe-detail", {
+angular.module("recipeDetail").component("recipeDetail", {
   templateUrl: "recipe/recipe.template.html",
   controller: RecipeController
 });
