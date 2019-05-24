@@ -1,7 +1,7 @@
 <h1>Your Recipes</h1>
 <ul>
   <li ng-repeat="recipe in $ctrl.recipes">
-    <a href="#!/recipes/{{ recipe.slug }}">
+    <a href="#!/recipes/{{ recipe.id }}">
       {{ recipe.title }}
     </a>
   </li>

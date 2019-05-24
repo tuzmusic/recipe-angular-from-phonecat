@@ -1,10 +1,17 @@
-function RecipeListController() {
-  this.recipes = recipes;
+function RecipeListController($http) {
+  let self = this;
+  $http.get("recipes.json").then(res => {
+    console.log(res.data);
+
+    self.recipes = res.data;
+  });
+
+  // this.recipes = recipes;
 }
 
 angular.module("recipeList").component("recipeList", {
   templateUrl: "recipe-list/recipe-list.template.html",
-  controller: RecipeListController
+  controller: ["$http", RecipeListController]
 });
 
 const recipes = [
