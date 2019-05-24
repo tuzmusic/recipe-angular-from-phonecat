@@ -1,24 +1,10 @@
-function RecipeDetailController($routeParams) {
-  recipe = mockRecipe;
-  // this.recipe = recipe;
-  this.recipeId = $routeParams.recipeId;
+function RecipeDetailController($http, $routeParams) {
+  $http.get("api-data/recipes/" + $routeParams.recipeId + ".json").then(res => {
+    this.recipe = res.data;
+  });
 }
 
 angular.module("recipeDetail").component("recipeDetail", {
   templateUrl: "recipe-detail/recipe-detail.template.html",
-  controller: RecipeDetailController
+  controller: ["$http", "$routeParams", RecipeDetailController]
 });
-
-const mockRecipe = {
-  title: "Chocolate Chip Cookies",
-  ingredients: [
-    { text: "1 cup of flour" },
-    { text: "1 tbsp sugar" },
-    { text: "1 bag chocolate chips" }
-  ],
-  steps: [
-    { text: "Mix ingredients" },
-    { text: "Bake ingredients" },
-    { text: "Eat cookies!" }
-  ]
-};
