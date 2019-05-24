@@ -16,9 +16,5 @@ describe("recipe", function() {
     it("should create a recipe with steps", () => {
       expect(recipe.steps.length).toBe(3);
     });
-
-    it("should have a slug id", () => {
-      expect(recipe.slug).toEqual("chocolate-chip-cookies");
-    });
   });
 });

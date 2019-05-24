@@ -1,6 +1,5 @@
 function RecipeController() {
   recipe = mockRecipe;
-  recipe.slug = slugify(recipe.title);
   this.recipe = recipe;
 }
 
