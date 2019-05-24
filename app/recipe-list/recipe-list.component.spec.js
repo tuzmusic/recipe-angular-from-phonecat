@@ -7,7 +7,7 @@ describe("recipeList", function() {
     beforeEach(inject(($componentController, _$httpBackend_) => {
       $httpBackend = _$httpBackend_;
       $httpBackend
-        .expectGET("recipes.json")
+        .expectGET("api-data/recipes.json")
         .respond([
           { title: "Chocolate Chip Cookies", id: "chocolate-chip-cookies" },
           { title: "Guacomole", id: "guacomole" }
@@ -15,15 +15,10 @@ describe("recipeList", function() {
       ctrl = $componentController("recipeList");
     }));
 
-    it("should create a list of recipes", () => {
+    it("should get a list of recipes with titles and ids", () => {
       expect(ctrl.recipes).toBeUndefined();
       $httpBackend.flush();
       expect(ctrl.recipes.length).toBe(2);
-    });
-
-    it("should have titled recipes", () => {
-      expect(ctrl.recipes).toBeUndefined();
-      $httpBackend.flush();
       expect(ctrl.recipes[0].title).toEqual("Chocolate Chip Cookies");
     });
   });
