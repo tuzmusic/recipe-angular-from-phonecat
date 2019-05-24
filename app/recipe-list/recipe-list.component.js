@@ -1,3 +1,12 @@
+function RecipeListController() {
+  this.recipes = recipes;
+}
+
+angular.module("recipeList").component("recipeList", {
+  templateUrl: "recipe-list/recipe-list.template.html",
+  controller: RecipeListController
+});
+
 const recipes = [
   {
     title: "Chocolate Chip Cookies",
@@ -27,10 +36,3 @@ const recipes = [
     ]
   }
 ];
-
-angular.module("recipeList").component("recipeList", {
-  templateUrl: "recipe-list/recipe-list.template.html",
-  controller: function RecipeListController() {
-    this.recipes = recipes;
-  }
-});

@@ -1,8 +1,6 @@
 describe("recipe", function() {
-  // Load the module that contains the `recipe` component before each test
   beforeEach(module("recipe"));
 
-  // Test the controller
   describe("recipeController", function() {
     let ctrl, recipe;
 
