@@ -29,7 +29,7 @@ const recipes = [
 ];
 
 angular.module("recipeList").component("recipeList", {
-  templateUrl: "recipe-list/recipeList.template.html",
+  templateUrl: "recipe-list/recipe-list.template.html",
   controller: function RecipeListController() {
     this.recipes = recipes;
   }
