@@ -1,11 +1,12 @@
-function RecipeController() {
+function RecipeDetailController($routeParams) {
   recipe = mockRecipe;
-  this.recipe = recipe;
+  // this.recipe = recipe;
+  this.recipeId = $routeParams.recipeId;
 }
 
 angular.module("recipeDetail").component("recipeDetail", {
-  templateUrl: "recipe/recipe.template.html",
-  controller: RecipeController
+  templateUrl: "recipe-detail/recipe-detail.template.html",
+  controller: RecipeDetailController
 });
 
 const mockRecipe = {

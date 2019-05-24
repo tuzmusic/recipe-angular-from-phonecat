@@ -1,1 +1,1 @@
-angular.module("recipeDetail", []);
+angular.module("recipeDetail", ["ngRoute"]);

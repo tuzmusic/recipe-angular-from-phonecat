@@ -29,12 +29,12 @@ describe("Recipe index page", function() {
 
 fdescribe("Recipe show page", () => {
   beforeEach(() => {
-    browser.get("index.html#!/recipes/chocolate-chip-cookies");
+    browser.get("#!/recipes/chocolate-chip-cookies");
   });
 
   it("should display the recipe", () => {
-    expect(
-      element(by.css("#recipe-title").getText()).toBe("chocolate-chip-cookies")
-    );
+    var title = element(by.id("recipe-title"));
+    expect(title);
+    expect(title.getText()).toEqual("chocolate-chip-cookies");
   });
 });
