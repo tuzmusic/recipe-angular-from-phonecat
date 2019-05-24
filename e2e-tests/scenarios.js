@@ -21,5 +21,8 @@ describe("Home page", function() {
   it("links to each recipe", () => {
     let links = element.all(by.css("a"));
     expect(links.count()).toBe(2);
+    expect(links.first().getAttribute("href")).toContain(
+      "chocolate-chip-cookies"
+    );
   });
 });

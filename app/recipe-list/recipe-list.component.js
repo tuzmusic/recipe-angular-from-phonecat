@@ -10,6 +10,7 @@ angular.module("recipeList").component("recipeList", {
 const recipes = [
   {
     title: "Chocolate Chip Cookies",
+    slug: "chocolate-chip-cookies",
     ingredients: [
       { text: "1 cup of flour" },
       { text: "1 tbsp sugar" },
@@ -23,6 +24,7 @@ const recipes = [
   },
   {
     title: "Guacomole",
+    slug: "guacomole",
     ingredients: [
       { text: "1 avocado" },
       { text: "1 tomato, diced" },
