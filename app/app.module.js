@@ -1,1 +1,1 @@
-angular.module("recipeApp", ["recipe", "recipeList", "stepSlide"]);
+angular.module("recipeApp", ["recipe-detail", "recipeList", "stepSlide"]);

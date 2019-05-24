@@ -1,11 +1,11 @@
-describe("recipe", function() {
-  beforeEach(module("recipe"));
+describe("recipe-detail", function() {
+  beforeEach(module("recipe-detail"));
 
   describe("recipeController", function() {
     let ctrl, recipe;
 
     beforeEach(inject($componentController => {
-      ctrl = $componentController("recipe");
+      ctrl = $componentController("recipe-detail");
       recipe = ctrl.recipe;
     }));
 
