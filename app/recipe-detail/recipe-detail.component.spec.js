@@ -4,13 +4,19 @@ describe("recipeDetail", function() {
   describe("recipeDetailController", function() {
     let ctrl, $httpBackend;
 
-    beforeEach(inject(($componentController, _$httpBackend_, $routeParams) => {
-      $httpBackend = _$httpBackend_;
+    beforeEach(inject(($componentController, $httpBackend, $routeParams) => {
+      // create a fresh controller(?)
+      ctrl = $componentController("recipeDetail");
+
+      // set up the mock response
+      // $httpBackend = _$httpBackend_;
       $httpBackend
         .expectGET("api-data/recipes/chocolate-chip-cookies.json")
         .respond(recipeData);
+
+      // set up the controller to make the request
       $routeParams.recipeId = "chocolate-chip-cookies";
-      ctrl = $componentController("recipeDetail");
+
       expect(ctrl.recipe).toBeUndefined();
       $httpBackend.flush();
     }));

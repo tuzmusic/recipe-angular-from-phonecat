@@ -27,7 +27,7 @@ describe("Recipe index page", function() {
   });
 });
 
-fdescribe("Recipe show page", () => {
+describe("Recipe show page", () => {
   beforeEach(() => {
     browser.get("#!/recipes/chocolate-chip-cookies");
   });
@@ -35,6 +35,6 @@ fdescribe("Recipe show page", () => {
   it("should display the recipe", () => {
     var title = element(by.id("recipe-title"));
     expect(title);
-    expect(title.getText()).toEqual("chocolate-chip-cookies");
+    expect(title.getText()).toEqual("Chocolate Chip Cookies");
   });
 });
