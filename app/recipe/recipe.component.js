@@ -5,7 +5,7 @@ function RecipeController() {
 }
 
 angular.module("recipe").component("recipe", {
-  template: "<p>here is a recipe</p>",
+  templateUrl: "recipe/recipe.template.html",
   controller: RecipeController
 });
 
