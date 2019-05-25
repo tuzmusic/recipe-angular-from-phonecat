@@ -4,12 +4,16 @@ describe("stepSlide", function() {
 
   // Test the controller
   describe("StepSlideController", function() {
-    it("should create a `stepSlide` model with a step", inject(function(
-      $componentController
-    ) {
-      var ctrl = $componentController("stepSlide");
+    let ctrl;
 
-      expect(ctrl.step.text).toEqual("Add 1 tbsp of sugar");
+    beforeEach(inject($componentController => {
+      ctrl = $componentController("stepSlide", null, { step: step });
     }));
+
+    it("should create a `stepSlide` model with a step", () => {
+      expect(ctrl.step.text).toEqual("Mix ingredients");
+    });
   });
 });
+
+let step = { text: "Mix ingredients" };
