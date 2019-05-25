@@ -6,9 +6,11 @@ angular.module("recipeDetail").component("recipeDetail", {
     function RecipeDetailController($http, $routeParams) {
       $http
         .get("api-data/recipes/" + $routeParams.recipeId + ".json")
-        .then(res => {
-          this.recipe = res.data;
-        });
+        .then(res => handleData(res.data));
+
+      handleData = data => {
+        this.recipe = data;
+      };
     }
   ]
 });
