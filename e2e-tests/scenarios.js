@@ -40,5 +40,8 @@ describe("Recipe show page", () => {
     expect(step.getText()).toEqual("Mix ingredients");
   });
 
-  it("can move to the next step of the recipe", () => {});
+  fit("shows the recipe summary", () => {
+    let summary = element(by.css(".recipe-summary"));
+    expect(summary.getText()).toContain("Mix ingredients");
+  });
 });

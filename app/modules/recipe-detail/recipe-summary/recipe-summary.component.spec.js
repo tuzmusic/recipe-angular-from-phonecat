@@ -6,11 +6,11 @@ describe("recipeSummary", function() {
 
     beforeEach(inject($componentController => {
       ctrl = $componentController("recipeSummary", null, { recipe });
-      jasmine.addCustomEqualityTester(angular.equals);
     }));
 
     it("should create a `recipeSummary` model with a recipe", () => {
       expect(ctrl.recipe).toEqual(recipe);
+      expect(ctrl.recipe.title).toEqual(recipe.title);
     });
   });
 });
