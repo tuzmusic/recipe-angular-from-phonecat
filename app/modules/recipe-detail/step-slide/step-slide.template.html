@@ -1,6 +1,6 @@
 <div class="step">
   <h3>Current step:</h3>
   <h1 class="step-text">{{ $ctrl.step.text }}</h1>
-  <button class="prev-button">←</button>
-  <button class="next-button">→</button>
+  <button ng-click="$ctrl.onPrevClick()" class="prev-button">←</button>
+  <button ng-click="$ctrl.onNextClick()" class="next-button">→</button>
 </div>

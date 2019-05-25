@@ -47,8 +47,11 @@ describe("Recipe show page", () => {
 
   fit("can go between steps of the recipe", () => {
     let nextButton = element(by.css(".next-button"));
+    let prevButton = element(by.css(".prev-button"));
     nextButton.click();
     let step = element(by.css(".step-text"));
     expect(step.getText()).toEqual("Bake ingredients");
+    prevButton.click();
+    expect(step.getText()).toEqual("Mix ingredients");
   });
 });

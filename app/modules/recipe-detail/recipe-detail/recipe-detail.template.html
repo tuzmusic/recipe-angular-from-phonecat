@@ -4,7 +4,7 @@
       <recipe-summary recipe="$ctrl.recipe"/>
     </td>
     <td>
-      <step-slide step="$ctrl.recipe.steps[$ctrl.currentStep]"/>
+      <step-slide on-prev-click="$ctrl.decrementStep()" on-next-click="$ctrl.incrementStep()" step="$ctrl.recipe.steps[$ctrl.currentStep]"/>
     </td>
   </tr>
 </table>

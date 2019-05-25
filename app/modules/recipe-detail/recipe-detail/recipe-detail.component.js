@@ -20,6 +20,7 @@ angular.module("recipeDetail").component("recipeDetail", {
         if (this.currentStep === this.recipe.steps.length - 1) return;
         this.currentStep += 1;
       };
+
       this.decrementStep = () => {
         if (this.currentStep === 0) return;
         this.currentStep -= 1;
