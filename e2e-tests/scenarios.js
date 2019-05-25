@@ -32,9 +32,14 @@ describe("Recipe show page", () => {
     browser.get("#!/recipes/chocolate-chip-cookies");
   });
 
-  it("should display the recipe", () => {
-    var title = element(by.id("recipe-title"));
+  it("should display the recipe title", () => {
+    let title = element(by.id("recipe-title"));
     expect(title);
     expect(title.getText()).toEqual("Chocolate Chip Cookies");
+  });
+
+  fit("shows the first step of the recipe", () => {
+    let step = element(by.css(".step-text"));
+    expect(step.getText()).toEqual("Mix ingredients");
   });
 });
