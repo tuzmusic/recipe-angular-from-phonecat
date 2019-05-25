@@ -45,6 +45,20 @@ describe("recipeDetail", function() {
         ctrl.decrementStep();
         expect(ctrl.currentStep).toBe(1);
       });
+
+      it("doesn't increment the step if we're on the last step", () => {
+        ctrl.recipe = { steps: [1, 2, 3, 4] };
+        ctrl.currentStep = 3;
+        ctrl.incrementStep();
+        expect(ctrl.currentStep).toBe(3);
+      });
+
+      it("doesn't decrement the step if we're on the first step", () => {
+        ctrl.recipe = { steps: [1, 2, 3, 4] };
+        ctrl.currentStep = 0;
+        ctrl.decrementStep();
+        expect(ctrl.currentStep).toBe(0);
+      });
     });
   });
 });
