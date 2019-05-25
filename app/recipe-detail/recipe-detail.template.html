@@ -1,8 +1,18 @@
-<h1 id="recipe-title">{{ $ctrl.recipe.title }}</h1>
-<p>
-  Steps (from recipeDetail):
-</p>
-<ul ng-repeat="step in $ctrl.recipe.steps">
-  <li>{{ step.text }}</li>
-</ul>
-<step-slide step="$ctrl.recipe.steps[0]"></step-slide>
+<table class="cook-view">
+  <tr>
+    <td>
+      <div class="recipe-summary">
+        <h1 id="recipe-title">{{ $ctrl.recipe.title }}</h1>
+        <p>
+          Steps (from recipeDetail):
+        </p>
+        <ul ng-repeat="step in $ctrl.recipe.steps">
+          <li>{{ step.text }}</li>
+        </ul>
+      </div>
+    </td>
+    <td>
+      <step-slide step="$ctrl.recipe.steps[0]"></step-slide>
+    </td>
+  </tr>
+</table>
