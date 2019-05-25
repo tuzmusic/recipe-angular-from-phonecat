@@ -26,6 +26,26 @@ describe("recipeDetail", function() {
     it("should get a recipe with steps", () => {
       expect(ctrl.recipe.steps.length).toBe(3);
     });
+
+    it("should know the current step of the recipe", () => {
+      expect(ctrl.currentStep).toBe(0);
+    });
+
+    describe("changing steps", () => {
+      it("incrementStep()", () => {
+        expect(ctrl.currentStep).toBe(0);
+        ctrl.incrementStep();
+        expect(ctrl.currentStep).toBe(1);
+      });
+
+      it("decrementStep();", () => {
+        expect(ctrl.currentStep).toBe(0);
+        ctrl.incrementStep();
+        ctrl.incrementStep();
+        ctrl.decrementStep();
+        expect(ctrl.currentStep).toBe(1);
+      });
+    });
   });
 });
 

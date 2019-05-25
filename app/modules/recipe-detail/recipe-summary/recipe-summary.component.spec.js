@@ -30,7 +30,6 @@ xdescribe("recipeSummary ViewUnitTest", () => {
     let el = angular.element('<recipe-summary recipe="recipe"/>');
     el = $compile(el)(scope);
     scope.$digest;
-    // debugger;
     expect(el[0].querySelectorAll("recipe-summary").length).toBe(1);
     expect(el[0].querySelectorAll(".recipe-summary-step").length).toBe(3);
   });
