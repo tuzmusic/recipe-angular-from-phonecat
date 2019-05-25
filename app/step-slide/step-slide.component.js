@@ -1,5 +1,8 @@
 angular.module("recipeDetail").component("stepSlide", {
-  template: "<p class='step-text'>Mix ingredients</p>",
+  templateUrl: "step-slide/step-slide.template.html",
+  transclude: true,
+  // require: { recipeCtrl: "^recipeDetail" },
+  bindings: { step: "<" },
   controller: function StepSlideController() {
     this.step = {
       text: "Add 1 tbsp of sugar"
