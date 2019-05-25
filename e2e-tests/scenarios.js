@@ -35,7 +35,7 @@ describe("Recipe show page", () => {
     expect(title.getText()).toEqual("Chocolate Chip Cookies");
   });
 
-  fit("shows the first step of the recipe", () => {
+  it("shows the first step of the recipe", () => {
     let step = element(by.css(".step-text"));
     expect(step.getText()).toEqual("Mix ingredients");
   });

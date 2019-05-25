@@ -1,6 +1,1 @@
-angular.module("recipeApp", [
-  "ngRoute",
-  "recipeDetail",
-  "recipeList",
-  "stepSlide"
-]);
+angular.module("recipeApp", ["ngRoute", "recipeDetail", "recipeList"]);
