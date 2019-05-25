@@ -2,14 +2,13 @@ describe("recipeDetail", function() {
   beforeEach(module("recipeDetail"));
 
   describe("recipeDetailController", function() {
-    let ctrl, $httpBackend;
+    let ctrl;
 
     beforeEach(inject(($componentController, $httpBackend, $routeParams) => {
       // set up the controller to make the request
       $routeParams.recipeId = "chocolate-chip-cookies";
 
       // set up the mock response
-      // $httpBackend = _$httpBackend_;
       $httpBackend
         .expectGET("api-data/recipes/chocolate-chip-cookies.json")
         .respond(recipeData);

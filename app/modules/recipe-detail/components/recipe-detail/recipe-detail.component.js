@@ -1,5 +1,6 @@
 angular.module("recipeDetail").component("recipeDetail", {
-  templateUrl: "recipe-detail/recipe-detail.template.html",
+  templateUrl:
+    "modules/recipe-detail/components/recipe-detail/recipe-detail.template.html",
   transclude: true,
   controller: [
     "$http",

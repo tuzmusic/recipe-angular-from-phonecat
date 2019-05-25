@@ -1,5 +1,6 @@
 angular.module("recipeDetail").component("stepSlide", {
-  templateUrl: "step-slide/step-slide.template.html",
+  templateUrl:
+    "modules/recipe-detail/components/step-slide/step-slide.template.html",
   transclude: true,
   // require: { recipeCtrl: "^recipeDetail" },
   bindings: { step: "<" },

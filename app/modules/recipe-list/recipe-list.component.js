@@ -5,6 +5,6 @@ function RecipeListController($http) {
 }
 
 angular.module("recipeList").component("recipeList", {
-  templateUrl: "recipe-list/recipe-list.template.html",
+  templateUrl: "modules/recipe-list/recipe-list.template.html",
   controller: ["$http", RecipeListController]
 });
