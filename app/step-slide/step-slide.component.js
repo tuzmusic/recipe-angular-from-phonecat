@@ -1,4 +1,4 @@
-angular.module("stepSlide").component("stepSlide", {
+angular.module("recipeDetail").component("stepSlide", {
   templateUrl: "step-slide/step-slide.template.html",
   controller: function StepSlideController() {
     this.step = {
