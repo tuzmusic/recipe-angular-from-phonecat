@@ -1,33 +1,33 @@
 body {
-  padding: 20px;
+  height: 100%
+}
+
+.app-container {
+  height: 100%
 }
 
 .cook-view tr {
   vertical-align: top;
 }
 
-.cook-view {
-  border: 3px solid lightblue
+table.cook-view {
+  border: red 2px solid;
+  height: 100%;
+  display: flex;
+  background-color: navy;
+  color: white;
 }
 
 td .recipe-summary {
-  border-right: 4px white solid;
-}
-
-td .step {
-  position: relative
+  border-right: 7px white solid;
 }
 
 .step {
   padding: 20px;
-  background-color: navy;
-  color: white;
   position: relative
 }
 
 .recipe-summary {
-  background-color: navy;
-  color: white;
   padding: 20px;
   display: inline-block;
   position: relative
