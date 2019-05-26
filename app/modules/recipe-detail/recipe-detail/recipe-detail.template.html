@@ -1,8 +1,16 @@
 <div class="cook-view">
     <div class="recipe-summary">
-      <recipe-summary recipe="$ctrl.recipe"/>
+      <recipe-summary 
+        recipe="$ctrl.recipe"
+        currentStep="$ctrl.currentStep"
+      />
     </div>
     <div class="step-slide">
-      <step-slide on-prev-click="$ctrl.decrementStep()" on-next-click="$ctrl.incrementStep()" step="$ctrl.recipe.steps[$ctrl.currentStep]"/>
+      <recipe-session 
+        on-prev-click="$ctrl.decrementStep()" 
+        on-next-click="$ctrl.incrementStep()" 
+        recipe="$ctrl.recipe"
+        current-step="$ctrl.currentStep"
+      />
     </div>
 </div>

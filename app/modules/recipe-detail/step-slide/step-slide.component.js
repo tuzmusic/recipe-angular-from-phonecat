@@ -5,10 +5,5 @@ angular.module("recipeDetail").component("stepSlide", {
     onPrevClick: "&",
     onNextClick: "&"
   },
-  controller: function StepSlideController() {
-    let ctrl = this;
-    ctrl.click = () => {
-      console.log("click");
-    };
-  }
+  controller: function StepSlideController() {}
 });

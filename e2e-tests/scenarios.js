@@ -24,7 +24,7 @@ describe("Recipe index page", function() {
   });
 });
 
-describe("Recipe show page", () => {
+fdescribe("Recipe show page", () => {
   beforeEach(() => {
     browser.get("#!/recipes/chocolate-chip-cookies");
   });
@@ -45,7 +45,7 @@ describe("Recipe show page", () => {
     expect(summary.getText()).toContain("Mix ingredients");
   });
 
-  fit("can go between steps of the recipe", () => {
+  it("can go between steps of the recipe", () => {
     let nextButton = element(by.css(".next-button"));
     let prevButton = element(by.css(".prev-button"));
     nextButton.click();

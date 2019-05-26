@@ -15,7 +15,7 @@ describe("recipeSummary", function() {
   });
 });
 
-xdescribe("recipeSummary ViewUnitTest", () => {
+describe("recipeSummary ViewUnitTest", () => {
   let scope;
   let $compile;
   beforeEach(module("recipeDetail"));
@@ -26,11 +26,13 @@ xdescribe("recipeSummary ViewUnitTest", () => {
   }));
 
   it("should display the steps", () => {
-    scope["recipe"] = recipe;
+    scope.recipe = recipe;
     let el = angular.element('<recipe-summary recipe="recipe"/>');
     el = $compile(el)(scope);
     scope.$digest;
-    expect(el[0].querySelectorAll("recipe-summary").length).toBe(1);
+    // expect(el[0].querySelectorAll("recipe-summary").length).toBe(1);
+    expect(scope.recipe.title).toEqual("Chocolate Chip Cookies");
+    expect(el[0].querySelectorAll("p").length).toBe(1);
     expect(el[0].querySelectorAll(".recipe-summary-step").length).toBe(3);
   });
 });

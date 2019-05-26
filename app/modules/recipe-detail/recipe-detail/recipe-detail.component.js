@@ -1,7 +1,6 @@
 angular.module("recipeDetail").component("recipeDetail", {
   templateUrl:
     "modules/recipe-detail/recipe-detail/recipe-detail.template.html",
-  transclude: true,
   controller: [
     "$http",
     "$routeParams",
@@ -17,11 +16,15 @@ angular.module("recipeDetail").component("recipeDetail", {
       };
 
       this.incrementStep = () => {
+        console.log("click");
+
         if (this.currentStep === this.recipe.steps.length - 1) return;
         this.currentStep += 1;
       };
 
       this.decrementStep = () => {
+        console.log("click");
+
         if (this.currentStep === 0) return;
         this.currentStep -= 1;
       };
