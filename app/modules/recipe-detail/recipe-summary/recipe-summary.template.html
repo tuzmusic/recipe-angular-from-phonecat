@@ -1,11 +1,9 @@
-<div class="recipe-summary">
-  <h1 id="recipe-title">{{ $ctrl.recipe.title }}</h1>
-  <p>
-    Steps (from recipeDetail):
-  </p>
-  <ul>
-    <li ng-repeat="step in $ctrl.recipe.steps" class="recipe-summary-step">
-      {{ step.text }}
-    </li>
-  </ul>
-</div>
+<h1 id="recipe-title">{{ $ctrl.recipe.title }}</h1>
+<p>
+  Steps:
+</p>
+<ul>
+  <li ng-repeat="step in $ctrl.recipe.steps" class="recipe-summary-step">
+    {{ step.text }}
+  </li>
+</ul>

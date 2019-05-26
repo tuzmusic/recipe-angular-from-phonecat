@@ -1,10 +1,8 @@
-<table class="cook-view">
-  <tr>
-    <td>
+<div class="cook-view">
+    <div class="recipe-summary sidebar">
       <recipe-summary recipe="$ctrl.recipe"/>
-    </td>
-    <td>
+    </div>
+    <div class="step-slide">
       <step-slide on-prev-click="$ctrl.decrementStep()" on-next-click="$ctrl.incrementStep()" step="$ctrl.recipe.steps[$ctrl.currentStep]"/>
-    </td>
-  </tr>
-</table>
+    </div>
+</div>

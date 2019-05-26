@@ -1,39 +1,26 @@
-body {
-  height: 100%
-}
-
-.app-container {
-  height: 100%
-}
-
-.cook-view tr {
-  vertical-align: top;
-}
-
-table.cook-view {
-  border: red 2px solid;
+.cook-view {
+  /* border: red 2px solid; */
   height: 100%;
   display: flex;
   background-color: navy;
   color: white;
+  flex: 1;
+  margin: 10px
 }
 
-td .recipe-summary {
-  border-right: 7px white solid;
-}
-
-.step {
+.step-slide {
+  flex: 2;
   padding: 20px;
-  position: relative
 }
 
 .recipe-summary {
+  flex: 1;
+  border-right: 7px white solid;
   padding: 20px;
   display: inline-block;
-  position: relative
 }
 
-.step button {
+.step-slide button {
   background-color: red;
   margin: 10px;
 }
