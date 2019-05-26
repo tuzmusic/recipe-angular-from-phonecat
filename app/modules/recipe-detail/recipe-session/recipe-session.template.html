@@ -1,5 +1,6 @@
-<h3>Current step: {{$ctrl.currentStep + 1}} of {{$ctrl.recipe.steps.length}}</h3>
-<!-- <h1 class="step-text">{{ $ctrl.step.text }}</h1> -->
+<h3>
+  Current step: {{ $ctrl.currentStep + 1 }} of {{ $ctrl.recipe.steps.length }}
+</h3>
+<current-step step="$ctrl.recipe.steps[$ctrl.currentStep]"></current-step>
 <button ng-click="$ctrl.onPrevClick()" class="prev-button">←</button>
 <button ng-click="$ctrl.onNextClick()" class="next-button">→</button>
-<current-step step="$ctrl.recipe.steps[$ctrl.currentStep]"/>

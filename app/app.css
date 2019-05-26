@@ -13,11 +13,6 @@ body {
   margin: 10px
 }
 
-.step-slide {
-  flex: 2;
-  padding: 20px;
-}
-
 .recipe-summary {
   flex: 1;
   border-right: 7px white solid;
@@ -25,7 +20,12 @@ body {
   display: inline-block;
 }
 
-.step-slide button {
+.recipe-session {
+  flex: 2;
+  padding: 20px;
+}
+
+.recipe-session button {
   background-color: red;
   margin: 10px;
 }
